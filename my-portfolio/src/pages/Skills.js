@@ -43,11 +43,12 @@ const Skills = () => {
         <div className="progress-bar-container">
           <p>My Degree Progress</p>
           <div className="progress-bar">
-            <div className="progress" style={{ width: "50%" }}></div>
+            <div className="progress" style= "width: 50%" ></div> 
           </div>
           <p className="progress-label">75% Completed</p>
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section className="skills-section">
