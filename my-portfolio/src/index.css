@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: #121212;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+section {
+  padding: 5rem 10%;
+}

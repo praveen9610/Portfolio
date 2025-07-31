@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text span {
+  color: #8d8240;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #fff;
+  color: #48080881;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+}
+
+.hero-img img {
+  max-width: 400px;
+  border-radius: 20px;
+}

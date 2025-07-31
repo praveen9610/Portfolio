@@ -1,0 +1,16 @@
+.projects h2 {
+  color: #FFD700;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 6px;
+}
