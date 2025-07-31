@@ -54,7 +54,7 @@ const About = () => {
               <ul className="info-list">
                 <li>
                   <span className="info-title">BSc. (Hons) in Information Technology</span>
-                  <span className="info-subtitle">SLIIT University (2021 - Present)</span>
+                  <span className="info-subtitle">SLIIT University (2022 - Present)</span>
                 </li>
                 <li>
                   <span className="info-title">Diploma in Information Technology</span>
@@ -76,7 +76,7 @@ const About = () => {
               <ul className="info-list">
                 <li>
                   <span className="info-title">Software Engineering Intern</span>
-                  <span className="info-subtitle">Lanka Tech Innovation (PVT) Ltd (2023 - Present)</span>
+                  <span className="info-subtitle">Lanka Tech Innovation (PVT) Ltd (2025 - Present)</span>
                   <p className="info-description">
                     Developing web applications using modern frameworks, collaborating with cross-functional teams, and implementing responsive UI designs.
                   </p>
