@@ -1,16 +1,277 @@
-.projects h2 {
-  color: #FFD700;
+.projects {
+  padding: 6rem 8%;
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+}
+
+.highlight {
+  color: #10b981;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #10b981;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.section-header:hover .highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: #10b981;
+  margin: 0.5rem auto 1rem;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .project-card {
-  background: #1e1e1e;
-  padding: 1rem;
+  background: rgba(31, 41, 55, 0.7);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #10b981;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #f3f4f6;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech {
+  margin-bottom: 1.5rem;
+}
+
+.tech-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #f3f4f6;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  background: #10b981;
+  transform: translateY(-3px);
+}
+
+.tech-tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -35px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.project-btn {
+  padding: 0.6rem 1.2rem;
   border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.view-btn {
+  background: #10b981;
+  color: white;
+}
+
+.view-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.code-btn {
+  background: transparent;
+  color: #10b981;
+  border: 1px solid #10b981;
+}
+
+.code-btn:hover {
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Category colors */
+.project-card.full-stack {
+  border-left-color: #3b82f6;
+}
+
+.project-card.web {
+  border-left-color: #8b5cf6;
+}
+
+.project-card.mobile {
+  border-left-color: #ec4899;
+}
+
+.project-card.iot {
+  border-left-color: #f59e0b;
+}
+
+.project-card.full-stack .project-icon {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.project-card.web .project-icon {
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.project-card.mobile .project-icon {
+  color: #ec4899;
+  background: rgba(236, 72, 153, 0.1);
+}
+
+.project-card.iot .project-icon {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 5%;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

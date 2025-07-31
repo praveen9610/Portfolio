@@ -1,43 +1,344 @@
-.skills-section {
-  padding: 5rem 10%;
+/* Skills Page Styles */
+.skills-page {
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--dark);
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.skills-header {
+/* Background elements */
+.bg-blur-1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  filter: blur(100px);
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.bg-blur-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  filter: blur(120px);
+  bottom: -150px;
+  right: -150px;
+  z-index: 0;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Section Header Styles */
+.section-header {
   text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
-.skills-header h1 {
-  font-size: 2rem;
-  color: #FFD700;
-}
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.skill-card {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.skill-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #FFD700;
-}
-
-.skill-list {
+.section-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-light);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
-.skill-item {
+.section-header .section-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Education Section Styles */
+.education-section {
+  padding: 4rem 10%;
+  position: relative;
+  z-index: 2;
+}
+
+.education-card {
+  display: flex;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-light);
+}
+
+.education-logo {
+  padding: 2rem;
+  background: rgba(37, 37, 37, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.education-logo img {
+  max-width: 150px;
+  height: auto;
+  filter: grayscale(100%) contrast(120%);
+  transition: filter 0.3s;
+}
+
+.education-card:hover .education-logo img {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.education-details {
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+.education-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.institution {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.education-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  color: var(--text-light);
+}
+
+.education-meta span {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.progress-container {
+  margin-top: 2rem;
+}
+
+.progress-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: 4px;
+  position: relative;
+  transition: width 1s ease-in-out;
+}
+
+.progress-fill::after {
+  content: attr(data-progress);
+  position: absolute;
+  right: 0;
+  top: -25px;
+  background: var(--primary-light);
+  color: var(--dark);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Skills Section Styles */
+.skills-section {
+  padding: 4rem 10%;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+  border-color: var(--primary-light);
+}
+
+.skill-category h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.skill-level {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+/* Skills Summary Styles */
+.skills-summary {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-summary h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--primary-light);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-item {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+  border-color: var(--primary-light);
+}
+
+.summary-icon {
+  font-size: 2rem;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+}
+
+.summary-content h4 {
+  font-size: 2.2rem;
+  color: var(--primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.summary-content p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+  }
+  
+  .education-logo {
+    min-width: auto;
+    padding: 1.5rem;
+  }
+  
+  .section-header h1 {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .education-section, .skills-section {
+    padding: 2rem 5%;
+  }
 }
