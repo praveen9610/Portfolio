@@ -99,7 +99,7 @@ const Contact = () => {
             </div>
             <div className="info-content">
               <h3>Phone</h3>
-              <a href="tel:+94771234567">+94 77 123 4567</a>
+              <a href="tel:+94766400562">+94 76 640 0562</a>
             </div>
           </motion.div>
 
@@ -113,7 +113,7 @@ const Contact = () => {
             </div>
             <div className="info-content">
               <h3>Location</h3>
-              <p>Colombo, Sri Lanka</p>
+              <p>No.05 Rampadeniya, Ginigathena</p>
             </div>
           </motion.div>
         </div>
