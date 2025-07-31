@@ -1,27 +1,415 @@
+:root {
+  --primary: #10b981;
+  --primary-light: #34d399;
+  --primary-dark: #059669;
+  --secondary: #3b82f6;
+  --dark: #111827;
+  --darker: #0a0f1a;
+  --text: #f3f4f6;
+  --text-light: #9ca3af;
+  --white: #ffffff;
+  --black: #000000;
+  --accent: #8b5cf6;
+  --bg-gradient: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+}
+
 .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  color: var(--text);
+}
+
+/* Background elements */
+.bg-blur-1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  filter: blur(100px);
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.bg-blur-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  filter: blur(120px);
+  bottom: -150px;
+  right: -150px;
+  z-index: 0;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Rest of your existing CSS remains exactly the same */
+
+.hero-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4rem;
+  z-index: 2;
 }
 
 .hero-text {
-  max-width: 50%;
+  max-width: 600px;
 }
 
-.hero-text span {
-  color: #8d8240;
+.greeting {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.greeting-highlight {
+  color: var(--primary-light);
+  position: relative;
+  display: inline-block;
+}
+
+.greeting-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-light);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.greeting:hover .greeting-highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.name {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.name-highlight {
+  color: var(--primary-light);
+  position: relative;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-light);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.name:hover .name-highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.animated-text {
+  height: 72px;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-text-container {
+  position: relative;
+  height: 100%;
+}
+
+.animated-text-track {
+  position: absolute;
+  width: 100%;
+}
+
+.animated-text-item {
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animated-text-item h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.2;
+  position: relative;
+}
+
+.animated-text-underline {
+  width: 100px;
+  height: 3px;
+  background: var(--primary-light);
+  margin-top: 8px;
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.animated-text-item:hover .animated-text-underline {
+  transform: scaleX(1.2);
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin: 1.5rem 0 2rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+.tech-stack {
+  margin: 2rem 0;
+}
+
+.tech-stack-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.tech-icon:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
+.tech-tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: -35px;
+}
+
+.cta-section {
+  margin-top: 3rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .hero-btn {
-  display: inline-block;
-  margin-top: 2rem;
-  background: #fff;
-  color: #48080881;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.hero-img img {
-  max-width: 400px;
-  border-radius: 20px;
+.hero-btn svg {
+  transition: transform 0.3s ease;
 }
+
+.hero-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-light);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
+.primary-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.secondary-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: var(--primary);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  border-color: transparent;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 20px;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.profile-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(16, 185, 129, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.profile-border {
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: -3px;
+  left: -3px;
+  border: 3px solid var(--primary-light);
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.profile-image:hover ~ .profile-glow,
+.profile-image:hover ~ .profile-border {
+  opacity: 0.7;
+}
+
+.profile-image {
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  filter: grayscale(10%) contrast(1.05) brightness(0.9);
+  position: relative;
+  z-index: 2;
+}
+
+.profile-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  filter: grayscale(0%) contrast(1.05) brightness(1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive styles remain the same as before */
