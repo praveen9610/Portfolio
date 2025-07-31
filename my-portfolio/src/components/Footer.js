@@ -19,11 +19,11 @@ const Footer = () => {
             <div className="link-group">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
               </ul>
             </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="footer-contact">
             <h4>Get In Touch</h4>
             <p>
-              <FaEnvelope /> praveen.perera@example.com
+              <FaEnvelope /> geethanjanaperera02.com
             </p>
             <div className="social-links">
               <a href="https://github.com/praveen9610" target="_blank" rel="noreferrer" aria-label="GitHub">
