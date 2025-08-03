@@ -4,6 +4,7 @@ This is my personal portfolio website built using React and related technologies
 It showcases my skills, projects, and professional details.
 
 Live Website
+
 https://portfolio-lemon-rho-91.vercel.app/
 
 Built With
@@ -24,7 +25,9 @@ Testing Library – React component testing utilities
 
 Web Vitals – Web performance measurement
 
+
 Getting Started
+
 To run this project locally:
 
 1. Clone the repository
