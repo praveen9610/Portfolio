@@ -9,12 +9,19 @@ https://portfolio-lemon-rho-91.vercel.app/
 Built With
 
 React – JavaScript library for building user interfaces
+
 React Router DOM – Routing library for React apps
+
 React Icons – Icon library for React
+
 Font Awesome – Icon toolkit for scalable vector icons
+
 Framer Motion – Animation library for React
+
 Create React App – Project setup and scripts
+
 Testing Library – React component testing utilities
+
 Web Vitals – Web performance measurement
 
 Getting Started
