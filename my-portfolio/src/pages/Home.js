@@ -3,6 +3,7 @@ import "./Home.css";
 import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs, FaCode } from "react-icons/fa";
 import { SiMongodb, SiTypescript, SiJavascript, SiRedux, SiGraphql } from "react-icons/si";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const techStack = [
@@ -110,20 +111,20 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 1.4 }}
           >
             <div className="cta-buttons">
-              <a href="#contact" className="hero-btn primary-btn">
+              <Link to ="/contact" className="hero-btn primary-btn">
                 <span>Hire Me</span>
                 <svg width="13px" height="10px" viewBox="0 0 13 10">
                   <path d="M1,5 L11,5"></path>
                   <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
-              </a>
-              <a href="#projects" className="hero-btn secondary-btn">
+              </Link>
+              <Link to ="/projects" className="hero-btn secondary-btn">
                 <span>View Work</span>
                 <svg width="13px" height="10px" viewBox="0 0 13 10">
                   <path d="M1,5 L11,5"></path>
                   <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
-              </a>
+              </Link>
             </div>
             
             <div className="social-links">
