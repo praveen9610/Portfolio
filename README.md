@@ -1,13 +1,13 @@
-Praveen Perera's Portfolio Website
+😎Praveen Perera's Portfolio Website
 
 This is my personal portfolio website built using React and related technologies.
 It showcases my skills, projects, and professional details.
 
-Live Website
+🌐 Live Website
 
 https://portfolio-lemon-rho-91.vercel.app/
 
-Built With
+🛠 Built With
 
 React – JavaScript library for building user interfaces
 
@@ -26,7 +26,7 @@ Testing Library – React component testing utilities
 Web Vitals – Web performance measurement
 
 
-Getting Started
+➡ Getting Started
 
 To run this project locally:
 
