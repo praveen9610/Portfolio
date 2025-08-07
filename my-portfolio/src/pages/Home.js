@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   const techStack = [
-    { icon: <FaReact />, name: "React" },
     { icon: <SiTypescript />, name: "TypeScript" },
     { icon: <SiJavascript />, name: "JavaScript" },
+    { icon: <FaReact />, name: "React" },
     { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <SiMongodb />, name: "MongoDB" },
     { icon: <SiRedux />, name: "Redux" },
@@ -78,7 +78,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 1.2 }}
           >
             I create elegant, performant digital experiences using modern web technologies. 
-            Currently pursuing my BSc in IT at SLIIT University while interning as a 
+            Currently pursuing my BSc in Information Technology while interning as a 
             Software Engineer.
           </motion.p>
 
