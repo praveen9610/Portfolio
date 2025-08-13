@@ -45,7 +45,7 @@ const Navbar = () => {
                 }
               >
               
-                <span className="link-text">About</span>
+                <span className="link-text">Skills</span>
               </NavLink>
             </li>
             <li>
