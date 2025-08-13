@@ -1,15 +1,17 @@
 import React from "react";
 import "./Skills.css";
-import { FaGraduationCap, FaCode, FaGlobe, FaDatabase, FaMobileAlt, FaPaintBrush, FaLayerGroup, FaTools } from "react-icons/fa";
+import { FaGraduationCap, FaCode, FaGlobe, FaDatabase, FaMobileAlt, FaPaintBrush, FaLayerGroup, FaTools, FaServer } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Skills = () => {
   // Skill data organized for better maintainability
   const skillsData = {
     programming: ["Java", "C++", "C", "Python", "PHP", "JavaScript"],
-    web: ["React JS", "HTML/CSS", "Node JS", "Express.js", "Bootstrap", "Tailwind CSS"],
-    databases: ["MongoDB", "MySQL", "Firebase", "SQLite"],
-    mobileTools: ["Android Studio", "Kotlin", "VS Code", "Postman", "GitHub"],
+    client_side: ["React JS", "HTML/CSS", "Bootstrap", "Tailwind CSS"],
+    server_side: [ "Node JS", "Express.js"],
+    databases: ["MongoDB", "MySQL", "Firestore", "SQLite"],
+    mobile: ["Android Studio"],
+    Tools: ["Kotlin", "VS Code", "Postman", "GitHub"],
     design: ["Figma", "Mockflow", "Adobe XD", "Photoshop"]
   };
 
@@ -23,10 +25,10 @@ const Skills = () => {
     JavaScript: 85,
     "React JS": 90,
     "HTML/CSS": 95,
-    "Node JS": 80,
-    "Express.js": 75,
     Bootstrap: 85,
     "Tailwind CSS": 80,
+    "Node JS": 80,
+    "Express.js": 75,
     MongoDB: 75,
     MySQL: 80,
     Firebase: 70,
@@ -156,16 +158,42 @@ const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Web Development */}
+          {/*Client-Side Technologies */}
           <motion.div 
             className="skill-category"
             whileHover={{ y: -5 }}
           >
             <h2>
-              <FaGlobe /> Web Development
+              <FaGlobe /> Client-Side Technologies
             </h2>
             <div className="skills-list">
-              {skillsData.web.map(skill => (
+              {skillsData.client_side.map(skill => (
+                <div className="skill-item" key={skill}>
+                  <div className="skill-info">
+                    <span className="skill-name">{skill}</span>
+                    <span className="skill-level">{proficiencyLevels[skill]}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <div 
+                      className="skill-progress" 
+                      style={{ width: `${proficiencyLevels[skill]}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+           {/* Server-Side Technologies */}
+          <motion.div 
+            className="skill-category"
+            whileHover={{ y: -5 }}
+          >
+            <h2>
+              <FaServer /> Server-Side Technologies
+            </h2>
+            <div className="skills-list">
+              {skillsData.server_side.map(skill => (
                 <div className="skill-item" key={skill}>
                   <div className="skill-info">
                     <span className="skill-name">{skill}</span>
@@ -208,16 +236,42 @@ const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Mobile & Tools */}
+          {/* Mobile */}
           <motion.div 
             className="skill-category"
             whileHover={{ y: -5 }}
           >
             <h2>
-              <FaMobileAlt /> Mobile & Tools
+              <FaMobileAlt /> Mobile Applications
             </h2>
             <div className="skills-list">
-              {skillsData.mobileTools.map(skill => (
+              {skillsData.mobile.map(skill => (
+                <div className="skill-item" key={skill}>
+                  <div className="skill-info">
+                    <span className="skill-name">{skill}</span>
+                    <span className="skill-level">{proficiencyLevels[skill]}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <div 
+                      className="skill-progress" 
+                      style={{ width: `${proficiencyLevels[skill]}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div> 
+
+           {/* Tools */}
+          <motion.div 
+            className="skill-category"
+            whileHover={{ y: -5 }}
+          >
+            <h2>
+              <FaTools /> Tools
+            </h2>
+            <div className="skills-list">
+              {skillsData.Tools.map(skill => (
                 <div className="skill-item" key={skill}>
                   <div className="skill-info">
                     <span className="skill-name">{skill}</span>
@@ -287,11 +341,23 @@ const Skills = () => {
               whileHover={{ y: -5 }}
             >
               <div className="summary-icon">
-                <FaLayerGroup />
+                <FaGlobe />
               </div>
               <div className="summary-content">
-                <h4>6+</h4>
-                <p>Web Technologies</p>
+                <h4>4+</h4>
+                <p>Client-Side Technologies</p>
+              </div>
+            </motion.div>
+            <motion.div 
+              className="summary-item"
+              whileHover={{ y: -5 }}
+            >
+              <div className="summary-icon">
+                <FaServer />
+              </div>
+              <div className="summary-content">
+                <h4>2+</h4>
+                <p>Server-Side Technologies</p>
               </div>
             </motion.div>
             <motion.div 
@@ -311,11 +377,35 @@ const Skills = () => {
               whileHover={{ y: -5 }}
             >
               <div className="summary-icon">
+                <FaMobileAlt />
+              </div>
+              <div className="summary-content">
+                <h4>1+</h4>
+                <p>Mobile Applications</p>
+              </div>
+            </motion.div>
+            <motion.div 
+              className="summary-item"
+              whileHover={{ y: -5 }}
+            >
+              <div className="summary-icon">
                 <FaTools />
               </div>
               <div className="summary-content">
-                <h4>5+</h4>
-                <p>Development Tools</p>
+                <h4>4+</h4>
+                <p>Tools</p>
+              </div>
+            </motion.div>
+            <motion.div 
+              className="summary-item"
+              whileHover={{ y: -5 }}
+            >
+              <div className="summary-icon">
+                <FaPaintBrush />
+              </div>
+              <div className="summary-content">
+                <h4>4+</h4>
+                <p>Design</p>
               </div>
             </motion.div>
           </div>
