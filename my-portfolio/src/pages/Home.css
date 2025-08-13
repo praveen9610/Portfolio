@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 8%;
+  padding: 0 6%;
   background: var(--dark);
   position: relative;
   overflow: hidden;
@@ -77,7 +77,7 @@
   font-size: 1.25rem;
   color: var(--text-light);
   margin-bottom: 0.75rem;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .name {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(4.5rem, 5vw, 4rem);
   font-weight: 700;
   margin: 0.5rem 0;
   line-height: 1.2;
@@ -137,7 +137,7 @@
 }
 
 .animated-text {
-  height: 72px;
+  height: 100px;
   margin: 1.5rem 0;
   position: relative;
   overflow: hidden;
@@ -183,10 +183,10 @@
 }
 
 .bio {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--text-light);
   margin: 1.5rem 0 2rem;
-  line-height: 1.7;
+  line-height: 1.9;
   position: relative;
 }
 
@@ -397,7 +397,7 @@
 }
 
 .profile-image {
-  max-width: 380px;
+  max-width: 500px;
   border-radius: 20px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
