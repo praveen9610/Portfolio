@@ -10,14 +10,14 @@
 }
 
 .section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem; 
   text-align: center;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3rem; 
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem; 
   color: #f3f4f6;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .section-divider {
-  width: 80px;
+  width: 100px; 
   height: 4px;
   background: #10b981;
   margin: 0 auto;
@@ -55,7 +55,7 @@
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem; 
 }
 
 .about-text {
@@ -65,29 +65,29 @@
 }
 
 .about-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem; 
+  margin-bottom: 1.8rem; 
   color: #f3f4f6;
 }
 
 .about-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem; 
+  line-height: 1.8; 
+  margin-bottom: 1.8rem; 
   color: #9ca3af;
 }
 
 .about-details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem; 
+  margin-top: 2.5rem; 
 }
 
 .education-section,
 .experience-section {
   background: rgba(31, 41, 55, 0.5);
-  padding: 2rem;
+  padding: 2.5rem; 
   border-radius: 10px;
   border-left: 3px solid #10b981;
 }
@@ -95,17 +95,17 @@
 .section-header {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem; 
+  margin-bottom: 2rem; 
 }
 
 .section-icon {
-  font-size: 1.5rem;
+  font-size: 2rem; 
   color: #10b981;
 }
 
 .section-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem; 
   color: #f3f4f6;
   margin: 0;
 }
@@ -116,8 +116,8 @@
 }
 
 .info-list li {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 2rem; 
+  padding-bottom: 2rem; 
   border-bottom: 1px solid rgba(156, 163, 175, 0.1);
 }
 
@@ -131,37 +131,38 @@
   display: block;
   font-weight: 600;
   color: #f3f4f6;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem; 
+  font-size: 1.2rem; 
 }
 
 .info-subtitle {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1.1rem; 
   color: #9ca3af;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem; 
 }
 
 .info-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.1rem; 
+  line-height: 1.7; 
   color: #9ca3af;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem; 
 }
 
 .skills-section {
-  margin-top: 2rem;
+  margin-top: 3rem; 
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem; 
+  margin-top: 2.5rem; 
 }
 
 .skill-card {
   background: rgba(31, 41, 55, 0.5);
-  padding: 2rem;
+  padding: 2.5rem; 
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -175,31 +176,31 @@
 }
 
 .skill-icon {
-  font-size: 2.5rem;
+  font-size: 3rem; 
   color: #10b981;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; 
 }
 
 .skill-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem; 
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; 
   color: #f3f4f6;
 }
 
 .skill-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.1rem; 
+  line-height: 1.7; 
   color: #9ca3af;
 }
 
 @media (max-width: 768px) {
   .about {
-    padding: 4rem 5%;
+    padding: 5rem 5%; 
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem; 
   }
   
   .about-details {
