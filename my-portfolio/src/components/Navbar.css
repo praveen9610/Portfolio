@@ -1,32 +1,30 @@
 :root {
-  --primary: #a19137;
-  --primary-light: #c9b95d;
-  --dark: #121212;
-  --light: #ffffff;
-  --gray: #e0e0e0;
+  --primary: #3a86ff;
+  --primary-light: #70a4ff;
+  --dark: #0a192f;
+  --light: #e6f1ff;
+  --gray: #ccd6f6;
 }
 
 .navbar {
-  background-color: rgba(18, 18, 18, 0.95);
+  background-color: var(--dark);
   backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   height: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0 2rem;
+  border-bottom: 1px solid rgba(100, 149, 237, 0.1);
 }
 
 .nav-container {
-  max-width: 1200px;
   height: 100%;
-  margin: 0 auto;
-  padding: 0 2rem 0 0;
+  margin: 0;
+  padding: 0 1.0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-   width: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -59,13 +57,16 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .nav-link {
@@ -76,15 +77,9 @@
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: .5rem 0;
   transition: all 0.3s ease;
   position: relative;
-}
-
-.link-number {
-  color: var(--primary);
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
 }
 
 .link-text {
@@ -94,11 +89,6 @@
 .nav-link:hover .link-text,
 .nav-link.active .link-text {
   color: var(--light);
-}
-
-.nav-link:hover .link-number,
-.nav-link.active .link-number {
-  color: var(--primary-light);
 }
 
 .nav-link::after {
@@ -120,18 +110,18 @@
 .contact-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: rgba(161, 145, 55, 0.1);
+  gap: 18px;
+  background-color: transparent;
   color: var(--primary);
-  padding: 0.7rem 1.5rem;
+  padding: 0.9rem 1rem;
   border-radius: 4px;
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid var(--primary);
   transition: all 0.3s ease;
+  margin-right: 2rem; /* Added to move left */
 }
-
 .contact-btn:hover {
   background-color: rgba(161, 145, 55, 0.2);
   color: var(--primary-light);
@@ -147,12 +137,10 @@
   .nav-container {
     padding: 0 1.5rem;
   }
-  
   .nav-links {
     display: none;
   }
-  
   .contact-btn {
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1rem;
   }
 }

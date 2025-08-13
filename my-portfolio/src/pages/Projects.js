@@ -74,15 +74,7 @@ const Projects = () => {
           >
             My <span className="highlight">Projects</span>
           </motion.h2>
-          <div className="section-divider"></div>
-          <motion.p
-            className="section-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            A selection of my recent work across various domains
-          </motion.p>
+          
         </div>
 
         <motion.div 
