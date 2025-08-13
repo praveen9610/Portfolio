@@ -15,16 +15,18 @@
   z-index: 1000;
   height: 80px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 2rem;
 }
 
 .nav-container {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+   width: 100%;
 }
 
 .logo {
@@ -36,7 +38,7 @@
 }
 
 .logo-main {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--light);
   letter-spacing: 0.5px;
